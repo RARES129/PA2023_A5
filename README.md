@@ -1,1 +1,2 @@
-# PA2023_A5
+Dascalu Rares-Vasilica
+Grupa A5
