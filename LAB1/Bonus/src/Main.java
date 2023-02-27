@@ -2,20 +2,11 @@ public class Main {
     public static void main(String[] args) {
         Main exercitii = new Main();
         exercitii.ex1(args);
-        //exercitii.ex2(args);
+        exercitii.ex2(args);
     }
 
     void ex1(String[] args) {
-        if (args.length > 1) {
-            System.out.println("PREA MULTE ARGUMENTE");
-            System.exit(0);
-        }
-
-        if (args.length < 1) {
-            System.out.println("PREA PUTINE ARGUMENTE");
-            System.exit(0);
-        }
-
+        System.out.println("EXERCITIUL 1:");
         try {
             Integer.parseInt(args[0]);
             System.out.println(args[0] + " is a valid integer number");
@@ -73,6 +64,52 @@ public class Main {
         System.out.println("Matricea A la puterea n este egala cu matricea initiala A :))");
     }
     void ex2(String[] args) {
-    // IN LUCRU
+
+        System.out.println("EXERCITIUL 2:");
+        try {
+            Integer.parseInt(args[1]);
+            System.out.println(args[1] + " is a valid integer number");
+        } catch (NumberFormatException e) {
+            System.out.println(args[1] + " is not a valid integer number");
+            System.exit(0);
+        }
+        try {
+            Integer.parseInt(args[2]);
+            System.out.println(args[2] + " is a valid integer number");
+        } catch (NumberFormatException e) {
+            System.out.println(args[2] + " is not a valid integer number");
+            System.exit(0);
+        }
+        int n = Integer.parseInt(args[1]);
+        int k = Integer.parseInt(args[2]);
+
+        int[][] matrix= new int[n][n];
+        if(k<=n)
+        {
+            int i,j,q;
+            for(i=0;i<n;i++)
+            {
+                for(q=0;q<k;q++)
+                {
+                    j=(i+q)%n;
+                    if(j!=i)
+                    {
+                        matrix[i][j]=1;
+                        matrix[j][i]=1;
+                    }
+                }
+            }
+            for(i=0;i<n;i++)
+            {
+                for(j=0;j<n;j++)
+                    System.out.print(matrix[i][j]+" ");
+                System.out.print("\n");
+            }
+
+        }
+        else
+        {
+            System.out.println("Nu exista un graf "+ args[2] + " regulat");
+        }
     }
 }
