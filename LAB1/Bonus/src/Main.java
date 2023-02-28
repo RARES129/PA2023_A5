@@ -46,7 +46,6 @@ public class Main {
                     }
                 }
             }
-
             for (int i = 1; i <= n; i++) {
                 for (int j = 1; j <= n; j++) {
                     A[i][j] = B[i][j];
@@ -55,8 +54,7 @@ public class Main {
         }
         for (int i = 1; i <= n; i++) { // testam daca matricea initila A este egala cu matricea A la puterea n
             for (int j = 1; j <= n; j++) {
-                if(A[i][j]!=CycleGraph[i][j])
-                {
+                if (A[i][j] != CycleGraph[i][j]) {
                     System.out.println("IDK");
                     System.exit(0);
                 }
@@ -64,6 +62,7 @@ public class Main {
         }
         System.out.println("Matricea A la puterea n este egala cu matricea initiala A :))");
     }
+
     void ex2(String[] args) {
 
         System.out.println("EXERCITIUL 2:");
@@ -84,33 +83,26 @@ public class Main {
         int n = Integer.parseInt(args[1]);
         int k = Integer.parseInt(args[2]);
 
-        int[][] matrix= new int[n][n];
-        if(k<=n)
-        {
-            int i,j,q;
-            for(i=0;i<n;i++)
-            {
-                for(q=0;q<k;q++)
-                {
-                    j=(i+q)%n;
-                    if(j!=i)
-                    {
-                        matrix[i][j]=1;
-                        matrix[j][i]=1;
+        int[][] matrix = new int[n][n];
+        if (k <= n) {
+            int i, j, q;
+            for (i = 0; i < n; i++) {
+                for (q = 0; q < k; q++) {
+                    j = (i + q) % n;
+                    if (j != i) {
+                        matrix[i][j] = 1;
+                        matrix[j][i] = 1;
                     }
                 }
             }
-            for(i=0;i<n;i++)
-            {
-                for(j=0;j<n;j++)
-                    System.out.print(matrix[i][j]+" ");
+            for (i = 0; i < n; i++) {
+                for (j = 0; j < n; j++)
+                    System.out.print(matrix[i][j] + " ");
                 System.out.print("\n");
             }
 
-        }
-        else
-        {
-            System.out.println("Nu exista un graf "+ args[2] + " regulat");
+        } else {
+            System.out.println("Nu exista un graf " + args[2] + " regulat");
         }
     }
 }
