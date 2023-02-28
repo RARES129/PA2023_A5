@@ -1,11 +1,12 @@
 public class Main {
+
     public static void main(String[] args) {
         Main exercitii = new Main();
         exercitii.ex1(args);
         exercitii.ex2(args);
     }
 
-    void ex1(String[] args) {
+    void ex1(String[] args) {// Pentru acest exercitiu am folosit din greseaza directed cycle graph
         System.out.println("EXERCITIUL 1:");
         try {
             Integer.parseInt(args[0]);
