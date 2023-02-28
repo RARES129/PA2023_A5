@@ -2,10 +2,16 @@ import java.util.Arrays;
 
 public class Location {
     private String name;
-    private Road[] drumuri = new Road[100];
+    private Road[] drumuri = new Road[2];
     private int NrDrumuri;
 
-    public Location(String name,int NrDrumuri,Road[] drumuri)
+    public Location()
+    {
+        this.name="";
+        this.NrDrumuri=0;
+    }
+
+    public void setLocation(String name,int NrDrumuri,Road[] drumuri)
     {
         this.name=name;
         this.NrDrumuri=NrDrumuri;
