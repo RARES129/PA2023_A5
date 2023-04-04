@@ -23,11 +23,11 @@ public class ExplorationMap {
         boolean visited = false;
         synchronized (matrix[row][col]) {
             if (!matrix[row][col].isEmpty()) {
-                System.out.print("Elementul de pe linia" + row + " coloana " + col + " a fost deja vizitat: ");
+                System.out.print("Elementul de pe linia " + row + " coloana " + col + " a fost deja vizitat: ");
                 return true;
             } else {
                 matrix[row][col].addAll(shared.extractTokens(size));
-                System.out.print("Vizitez elementul de pe linia " + row + " coloana" + col + ": ");
+                System.out.print("Vizitez elementul de pe linia " + row + " coloana " + col + ": ");
                 return true;
             }
         }
