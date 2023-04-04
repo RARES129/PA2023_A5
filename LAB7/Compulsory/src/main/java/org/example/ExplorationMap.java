@@ -10,7 +10,7 @@ public class ExplorationMap {
     private final SharedMemory shared;
 
     public ExplorationMap(int size) {
-        this.size=size;
+        this.size = size;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 matrix[i][j] = new ArrayList<>();
@@ -23,11 +23,11 @@ public class ExplorationMap {
         boolean visited = false;
         synchronized (matrix[row][col]) {
             if (!matrix[row][col].isEmpty()) {
-                System.out.print("Elementul de pe pozitia " + row + " " + col + " deja a fost vizitat: ");
+                System.out.print("Elementul de pe linia" + row + " coloana " + col + " a fost deja vizitat: ");
                 return true;
             } else {
                 matrix[row][col].addAll(shared.extractTokens(size));
-                System.out.print("Vizitez elementul de pe pozitia " + row + " " + col+": ");
+                System.out.print("Vizitez elementul de pe linia " + row + " coloana" + col + ": ");
                 return true;
             }
         }

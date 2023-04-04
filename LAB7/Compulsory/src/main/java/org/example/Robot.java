@@ -15,15 +15,17 @@ public class Robot implements Runnable {
     public void killRobot() {
         this.running = false;
     }
-    public boolean getStatus(){
+
+    public boolean getStatus() {
         return this.running;
     }
-    public void killRobotWhenFinished(){
+
+    public void killRobotWhenFinished() {
         List[][] list = new List[explore.getMap().getSize()][explore.getMap().getSize()];
         list = explore.getMap().getMatrix();
-        for(int i = 0 ; i < explore.getMap().getSize() ;i++){
-            for(int j = 0 ; j < explore.getMap().getSize();j++){
-                if(list[i][j].isEmpty()){
+        for (int i = 0; i < explore.getMap().getSize(); i++) {
+            for (int j = 0; j < explore.getMap().getSize(); j++) {
+                if (list[i][j].isEmpty()) {
                     return;
                 }
             }

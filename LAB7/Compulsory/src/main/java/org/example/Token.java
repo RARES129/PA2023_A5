@@ -2,10 +2,12 @@ package org.example;
 
 public class Token {
     private final int number;
-    public Token(int number){
+
+    public Token(int number) {
         this.number = number;
     }
-    public int getToken(){
+
+    public int getToken() {
         return this.number;
     }
 
@@ -13,7 +15,8 @@ public class Token {
     public String toString() {
         return ((Integer) number).toString();
     }
-    public int getNumber(){
+
+    public int getNumber() {
         return this.number;
     }
 }
