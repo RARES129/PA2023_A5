@@ -86,7 +86,7 @@ public class Robot implements Runnable {
                 }
             }
             if (exploration.getMap().visit(startRow, startColumn, this)) {
-                noOfTokens += exploration.getMem().getNoOfTokens();
+                noOfTokens += 1;
             }
             if (exploration.getMap().isFull()) {
                 break;
