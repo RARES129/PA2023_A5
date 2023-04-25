@@ -13,7 +13,7 @@ import java.util.List;
  * this class creates the common behaviour for all future commands.
  */
 public abstract class CommonCommandBehaviour implements Command {
-    public static final String path = "C:/Users/dasca/Desktop/catalog.json";
+    public static final String path = "C:/Users/dasca/Desktop/GREEN_GUM/JAVA/PA2023_A5/LAB5/Homework/catalog.json";
     List<Object> obj;
 
     /**
