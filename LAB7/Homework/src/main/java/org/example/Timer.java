@@ -14,8 +14,8 @@ public class Timer implements Runnable{
         startTime = System.currentTimeMillis();
         while(true){
             Long currentTime = System.currentTimeMillis();
-            if(currentTime - startTime > 50000) {
-                System.out.println("Execution time exceeded 50 seconds");
+            if(currentTime - startTime > 10000) {
+                System.out.println("Execution time exceeded 10 seconds");
                 System.exit(0);
             }
             if(exploration.getMap().isFull()) {
