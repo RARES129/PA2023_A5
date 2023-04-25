@@ -12,20 +12,20 @@ public class Exploration {
     private final List<Robot> robots = new ArrayList<>();
     private Timer timer;
 
-    public void start(){
+    public void start() {
         for (Robot robot : robots) {
             new Thread(robot).start();
         }
         Thread thread = new Thread(() -> {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            while(true){
+            while (true) {
                 try {
                     char command = (char) reader.read();
-                    if(command == 'p'){
+                    if (command == 'p') {
                         for (Robot robot : robots) {
                             robot.pause();
                         }
-                    }else if(command == 'r'){
+                    } else if (command == 'r') {
                         for (Robot robot : robots) {
                             robot.resume();
                         }
@@ -39,7 +39,7 @@ public class Exploration {
         new Thread(timer).start();
     }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         var explore = new Exploration();
         explore.addRobot(new Robot("Wall-E", explore));
         explore.addRobot(new Robot("R2D2", explore));

@@ -6,24 +6,25 @@ package org.example;
 public class ExplorationMap {
     private final Cell[][] matrix;
     private final int size;
+
     public ExplorationMap(int n) {
-        this.matrix= new Cell[n][n];
-        for(int i=0;i<n;++i){
-            for(int j=0;j<n;++j){
-                matrix[i][j]=new Cell();
+        this.matrix = new Cell[n][n];
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                matrix[i][j] = new Cell();
             }
         }
-        this.size=n;
+        this.size = n;
     }
 
     public int getSize() {
         return matrix.length;
     }
 
-    public boolean isFull(){
-        for(int i=0;i<size;++i){
-            for(int j=0;j<size;++j){
-                if(matrix[i][j].getTokens().isEmpty())
+    public boolean isFull() {
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j < size; ++j) {
+                if (matrix[i][j].getTokens().isEmpty())
                     return false;
             }
         }

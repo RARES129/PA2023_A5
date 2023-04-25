@@ -11,18 +11,20 @@ import java.util.List;
 public class SharedMemory {
     private final List<Token> tokens;
     private final int noOfTokens;
+
     public SharedMemory(int n) {
         this.noOfTokens = n;
         tokens = new ArrayList<Token>(noOfTokens);
-        for (int i = 0; i < noOfTokens*noOfTokens*noOfTokens; ++i) {
+        for (int i = 0; i < noOfTokens * noOfTokens * noOfTokens; ++i) {
             tokens.add(new Token(i));
         }
         Collections.shuffle(tokens);
     }
+
     public synchronized List<Token> extractTokens() {
-        List<Token> extracted= new ArrayList<>();
-        for(int i=0;i<noOfTokens;++i){
-            if(tokens.isEmpty())
+        List<Token> extracted = new ArrayList<>();
+        for (int i = 0; i < noOfTokens; ++i) {
+            if (tokens.isEmpty())
                 break;
             extracted.add(tokens.remove(0));
         }

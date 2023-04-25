@@ -8,9 +8,11 @@ import java.util.List;
  */
 public class Cell {
     private final List<Token> tokens;
+
     public Cell() {
         this.tokens = new ArrayList<>();
     }
+
     public List<Token> getTokens() {
         return tokens;
     }
