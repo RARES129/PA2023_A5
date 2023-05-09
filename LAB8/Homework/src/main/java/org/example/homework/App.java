@@ -14,7 +14,7 @@ public class App {
         try {
 
 
-            ImportTool.collectData("C:\\Users\\User\\IdeaProjects\\Lab8\\src\\main\\java\\org\\example\\albumList.csv");
+            ImportTool.collectData("C:\\Users\\dasca\\Desktop\\GREEN_GUM\\JAVA\\PA2023_A5\\LAB8\\Homework\\src\\main\\java\\org\\example\\albumList.csv");
             ImportTool.importDataCollected();
             Database.getDataSource().getConnection().close();
         } catch (IOException e) {

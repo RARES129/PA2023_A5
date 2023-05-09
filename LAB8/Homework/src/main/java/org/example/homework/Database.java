@@ -20,8 +20,8 @@ import javax.sql.DataSource;
 
 
 public class Database {
-    private static final String DB_USERNAME="l8";
-    private static final String DB_PASSWORD="l8";
+    private static final String DB_USERNAME="system";
+    private static final String DB_PASSWORD="system";
     private static final String DB_URL ="jdbc:oracle:thin:@localhost:1521:xe";
     private static final String DB_DRIVER_CLASS="oracle.jdbc.driver.OracleDriver";
 
