@@ -24,7 +24,8 @@ public class GameClient {
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
             System.out.println("Connected to server at " + host + ":" + port);
-            System.out.println("Type 'exit' to quit");
+            System.out.println("Type 'exit' to stop the client");
+            System.out.println("Type 'stop' to stop the server");
 
             BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
             while (true) {
