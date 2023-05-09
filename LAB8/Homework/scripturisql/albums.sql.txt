@@ -1,0 +1,27 @@
+drop table albums;
+
+drop sequence dept_seq;
+CREATE TABLE albums (
+  ID int not null primary key,
+  release_year varchar(25),
+  title varchar(25) ,
+  artist_id int,
+  CONSTRAINT FK_PersonOrder FOREIGN KEY (artist_id)
+    REFERENCES artists(id)
+  
+  );
+
+
+
+CREATE SEQUENCE dept_seq START WITH 1;
+
+CREATE OR REPLACE TRIGGER dept_bir 
+BEFORE INSERT ON albums 
+FOR EACH ROW
+
+BEGIN
+  SELECT dept_seq.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
+/

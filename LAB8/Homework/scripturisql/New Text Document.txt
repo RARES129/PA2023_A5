@@ -1,0 +1,4 @@
+drop table album_genre;
+drop table albums;
+drop table artists;
+drop table genres;

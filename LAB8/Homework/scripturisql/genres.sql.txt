@@ -1,0 +1,24 @@
+
+drop table genres;
+
+drop sequence dept_seq3;
+CREATE TABLE genres (
+  name varchar2(25),
+  id int primary key
+  
+  );
+
+
+
+CREATE SEQUENCE dept_seq3 START WITH 1;
+
+CREATE OR REPLACE TRIGGER dept_bir3 
+BEFORE INSERT ON genres
+FOR EACH ROW
+
+BEGIN
+  SELECT dept_seq3.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
+/

@@ -1,0 +1,24 @@
+
+drop table artists;
+
+drop sequence dept_seq2;
+CREATE TABLE artists (
+  name varchar2(25),
+  id int primary key
+  
+  );
+
+
+
+CREATE SEQUENCE dept_seq2 START WITH 1;
+
+CREATE OR REPLACE TRIGGER dept_bir2 
+BEFORE INSERT ON artists 
+FOR EACH ROW
+
+BEGIN
+  SELECT dept_seq2.NEXTVAL
+  INTO   :new.id
+  FROM   dual;
+END;
+/
