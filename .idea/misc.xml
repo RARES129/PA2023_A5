@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/LAB4/Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB4/Compulsory/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB5/Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB5/Compulsory/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB6/Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB6/Compulsory/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB7/Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB7/Compulsory/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB8/Bonus/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB8/Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB8/Compulsory/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB9/Homework/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB9/Compulsory/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB10/Compulsory/ClientApplication/pom.xml" />
+        <option value="$PROJECT_DIR$/LAB10/Compulsory/ServerApplication/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
