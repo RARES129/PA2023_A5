@@ -2,6 +2,8 @@ package org.example;
 
 //import org.junit.Test;
 
+import org.junit.Test;
+
 public class DummyClass {
     private String name, email;
     private int age;
@@ -34,10 +36,5 @@ public class DummyClass {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-//    @Test
-    public static void dummyMethod(){
-        System.out.println("dummyMethod");
     }
 }
