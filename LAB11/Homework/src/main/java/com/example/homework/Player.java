@@ -1,4 +1,4 @@
-package com.example.compulsory;
+package com.example.homework;
 
 import jakarta.persistence.*;
 
@@ -6,13 +6,12 @@ import jakarta.persistence.*;
 @Table(name="player")
 public class Player {
     @Id
-   // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name="name")
     private String name;
 
-    public Player(long id, String name) {
-        this.id = id;
+    public Player( String name) {
         this.name = name;
     }
     public Player(){}
@@ -23,5 +22,13 @@ public class Player {
 
     public String getName() {
         return name;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
